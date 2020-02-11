@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 django = "*"
 mysqlclient = "*"
+selenium = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.8"
