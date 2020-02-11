@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action='' method='post'>{% csrf_token %}
+  <p> Enter src station <input type='text' placeholder='SRC' name='src'></input></p>
+  <p> Enter dest station <input type='text' placeholder="DES" name='dest'></input></p>
+  <input type='submit'></input>
+</form>
+
+<h2> List of Trains </h2>
+<ul>
+  {% for each in trains_result %}
+  <li>{{each}}</li>
+  {% endfor %}
+</ul>
+{% endblock content %}
