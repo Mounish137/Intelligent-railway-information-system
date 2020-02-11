@@ -7,9 +7,11 @@
 </form>
 
 <h2> List of Trains </h2>
-<ul>
+<table>
   {% for each in trains_result %}
-  <li>{{each}}</li>
+  <tr>{% for item in each %}
+    <td>{{item}}</td>
+    {% endfor %}</tr><br>
   {% endfor %}
-</ul>
+</table>
 {% endblock content %}
